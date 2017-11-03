@@ -9,9 +9,9 @@ object BuildVersionResourceUtil {
 
     fun getDrawable(drawableId: Int): Drawable {
         return if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
-            Contextor.getInstance().context?.resources!!.getDrawable(drawableId)
+            Contextor.getInstance().context!!.resources!!.getDrawable(drawableId)
         } else {
-            Contextor.getInstance().context?.resources!!.getDrawable(drawableId,  Contextor.getInstance().context!!.theme)
+            Contextor.getInstance().context!!.resources!!.getDrawable(drawableId,  Contextor.getInstance().context!!.theme)
         }
     }
 }
