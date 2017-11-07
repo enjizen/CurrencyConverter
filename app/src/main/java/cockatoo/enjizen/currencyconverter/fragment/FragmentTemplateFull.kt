@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import cockatoo.enjizen.currencyconverter.R
 
 
-class FragmentTemplateFull : Fragment() {
+class FragmentTemplateFull : BaseFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Currency Converter</string>
+    <string name="country_india">India</string>
+    <string name="country_china">China</string>
+    <string name="country_australia">Australia</string>
+    <string name="country_portugal">Portugal</string>
+    <string name="country_america">America</string>
+    <string name="country_new_zealand">New Zealand</string>
+    <string name="currency_india">INR</string>
+    <string name="currency_china">CNY</string>
+    <string name="currency_australia">AUD</string>
+    <string name="currency_euro">EUR</string>
+    <string name="currency_usa">USD</string>
+    <string name="currency_new_zealand">NZD</string>
 </resources>

@@ -6,7 +6,7 @@ import org.jetbrains.anko.*
 
 object Log : AnkoLogger {
 
-    private var isShowLog : Boolean = true
+    private val isShowLog = true
 
     fun i(tag: String, msg: String?){
         if(isShowLog) {

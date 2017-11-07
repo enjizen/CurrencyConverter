@@ -9,11 +9,11 @@ import cockatoo.enjizen.currencyconverter.R
 import cockatoo.enjizen.currencyconverter.view.CustomSpinnerCountiesCurrencyAdapter
 import kotlinx.android.synthetic.main.fragment_main.*
 
-class MainFragment : Fragment() {
+class MainFragment : BaseFragment() {
 
-    private var countryNames = arrayOf("India", "China", "Australia", "Portugal", "America", "New Zealand")
-    private var flags = intArrayOf(R.drawable.india, R.drawable.china, R.drawable.australia, R.drawable.portugal, R.drawable.america, R.drawable.new_zealand)
-    private var currency = arrayOf("INR", "CNY", "AUD", "EUR", "USD", "NZD")
+    private var countryNames : Array<String>? = null
+    private var flags : IntArray? = null
+    private var currency : Array<String>? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,16 +31,40 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val countiesAdapter = CustomSpinnerCountiesCurrencyAdapter(context,this.flags,this.countryNames,this.currency)
+        val countiesAdapter = CustomSpinnerCountiesCurrencyAdapter(context,flags,countryNames,currency)
 
         spinnerCurrencyFrom.adapter = countiesAdapter
 
         spinnerCurrencyTo.adapter = countiesAdapter
 
+        showLoadingDialog()
+
+
     }
 
     private fun init(savedInstanceState: Bundle?) {
         // Init Fragment level's variable(s) here
+
+        countryNames = arrayOf(getString(R.string.country_india)
+                , getString(R.string.country_china)
+                , getString(R.string.country_australia)
+                , getString(R.string.country_portugal)
+                , getString(R.string.country_america)
+                , getString(R.string.country_new_zealand))
+
+        flags = intArrayOf(R.drawable.india
+                , R.drawable.china
+                , R.drawable.australia
+                , R.drawable.portugal
+                , R.drawable.america
+                , R.drawable.new_zealand)
+
+        currency = arrayOf(getString(R.string.currency_india)
+                , getString(R.string.currency_china)
+                , getString(R.string.currency_australia)
+                , getString(R.string.currency_euro)
+                , getString(R.string.currency_usa)
+                , getString(R.string.currency_new_zealand))
     }
 
 

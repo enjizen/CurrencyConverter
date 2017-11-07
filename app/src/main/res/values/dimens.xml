@@ -2,4 +2,5 @@
 <resources>
     <dimen name="padding_left_main_layout">16dp</dimen>
     <dimen name="padding_right_main_layout">16dp</dimen>
+    <dimen name="padding_main_layout">16dp</dimen>
 </resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">แปลงค่าเงิน</string>
+    <string name="country_india">อินเดีย</string>
+    <string name="country_china">จีน</string>
+    <string name="country_australia">ออสเตเรีย</string>
+    <string name="country_portugal">โปรตุเกส</string>
+    <string name="country_america">สหรัฐ อเมริกา</string>
+    <string name="country_new_zealand">นิวซีแลนด์</string>
+</resources>

@@ -5,19 +5,18 @@ import android.content.Context
 
 object ProgressDialogUtil{
     private var progressDialog: ProgressDialog? = null
-    private var message: String? = null
 
-     fun show(context: Context) {
+     fun show(context: Context, messageLoading: String) {
 
          if (progressDialog == null) {
              progressDialog = ProgressDialog(context)
-             message = "Loading..."
+             progressDialog!!.setMessage(messageLoading)
+             progressDialog!!.setCancelable(false)
+             progressDialog!!.setProgressStyle(ProgressDialog.STYLE_SPINNER)
+             progressDialog!!.show()
          }
 
-        progressDialog?.setMessage(message)
-        progressDialog?.setCancelable(false)
-        progressDialog?.setProgressStyle(ProgressDialog.STYLE_SPINNER)
-        progressDialog?.show()
+
     }
 
      fun dismiss() {
@@ -25,7 +24,7 @@ object ProgressDialogUtil{
             return
         }
 
-        progressDialog?.dismiss()
+        progressDialog!!.dismiss()
     }
 
 }
